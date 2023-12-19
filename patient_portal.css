@@ -1,0 +1,156 @@
+.header {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(163, 44, 44));
+    color: #0b0b0b; /* Text color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Return button styling */
+.return-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #c26e41;
+    border-radius: 5px;
+    transition: background-color 1s;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+}
+
+.return-button i {
+    margin-right: 5px;
+}
+
+.return-button:hover {
+    background-color: #767974;
+}
+
+/* Portal content styling */
+.portal-content {
+    max-width: 1000%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label, select, input[type="submit"], button {
+    display: block;
+    margin-bottom: 20px; /* Increased margin for text fields */
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+input[type="submit"], button {
+    width: 10%; /* Smaller width for submit button */
+    align-self: center;
+    margin-top: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px; /* Increased padding for better readability */
+    text-align: center;
+}
+
+th {
+    background-color: #21b3bd; /* Header background color */
+    color: #111010; /* Header text color */
+}
+
+/* Alternate row background color for better readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Button styling */
+button[type="submit"], button#show-filter {
+    background-color: #129ee4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+button[type="submit"]:hover, button#show-filter:hover {
+    background-color: #27298d;
+}
+
+/* Request button styling */
+button.request-button {
+    background-color: #26b651; /* Green background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    width: auto; /* Adjust button width to fit content */
+}
+
+button.request-button:hover {
+    background-color: #2d6eb4; /* Blue hover background color */
+}
+
+/* Adjust label alignment for the Request button */
+label.request-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111010; /* Label text color */
+}
+/* Style links to look like plain text */
+a {
+    text-decoration: none; /* Remove underlines */
+    color: rgb(185, 80, 61); /* Inherit the color from the parent element (usually black) */
+    cursor: pointer; /* Change the cursor to a pointer to indicate interactivity */
+    
+}
+form {
+    margin-bottom: 20px;
+}
+
+label, select, input[type="submit"], button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px; /* Increased padding for better button appearance */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"], button {
+    width: 50%;
+    align-self: center;
+}

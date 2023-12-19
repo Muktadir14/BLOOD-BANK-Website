@@ -1,0 +1,174 @@
+/* Styles for the header */
+.header {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(163, 44, 44));
+    color: #191818;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative; /* Added to position the menu button */
+}
+
+/* Styles for the user logo */
+.user-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Styles for the user name */
+.user-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Styles for the dashboard content */
+.dashboard-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the logout button */
+.exit-button {
+    text-decoration: none;
+    background-color: #858b4a;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.exit-button i {
+    margin-right: 5px;
+}
+
+.exit-button:hover {
+    background-color: #3b376b;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Additional styles for an elegant appearance (customize as needed) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Styles for the menu button and content */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2e59b7;
+    border: 1px solid #2e59b7;
+    border-radius: 4px;
+    z-index: 1;
+    min-width: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-content.show-menu {
+    display: flex;
+}
+
+.menu-content a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-content a:hover {
+    background-color: #489f44;
+    transition: .5s ease-in-out;
+}
+
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.history-table th,
+.history-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.history-table th {
+    background-color: #f2f2f2;
+}
+
+.history-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Style the nested dropdown */
+.nested-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the nested dropdown menu button */
+.nested-menu {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the nested dropdown content */
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nested-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the nested dropdown content on hover */
+.nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+}
