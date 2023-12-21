@@ -1,0 +1,99 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: gradient(to right, #ffffff, #df1d1d);
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(237, 213, 213));
+
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.toggle-form {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #b42929; /* Green */
+    border: none;
+    color: rgb(238, 156, 156);
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .toggle-form[data-form="eventForm"] {
+    background-color: #b42929; /* Blue */
+  }
+  
+  .toggle-form:hover {
+    background-color: #c69691; /* Darker green */
+  }
+  
+  .toggle-form[data-form="eventForm"]:hover {
+    background-color: #c69691; /* Darker blue */
+  }
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0e2e2;
+    margin-top: 20px;
+}
+
+form select, form input[type="date"], form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3fc546;
+}
+
+.hidden {
+    display: none;
+}
+
+button[type="submit"] {
+    position:relative;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(179, 49, 71);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: darkpink;
+  }
+  
+
+  .success {
+    color: green;
+}
+
+.error {
+    color: red;
+}

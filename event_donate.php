@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bb_donate.css">
+    <title>Event Participation Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Please fill out the form</h1>
+    <form id="eventdonateForm" action="submit_eventsForm.php" method="post">
+        <input type="hidden" id="userId" name="userId" value="<?php echo $_SESSION["user_id"]; ?>">
+        <div>
+            <label for="region">Region:</label>
+            <select id="region" name="region">
+                <option value="Abdullahpur">Abdullahpur</option>
+                <option value="Uttara">Uttara</option>
+                <option value="Mirpur">Mirpur</option>
+                <option value="Pallabi">Pallabi</option>
+                <option value="Kazipara">Kazipara</option>
+                <option value="Kafrul">Kafrul</option>
+                <option value="Agargaon">Agargaon</option>
+                <option value="Sher-e-Bangla Nagar">Sher-e-Bangla Nagar</option>
+                <option value="Cantonment area">Cantonment area</option>
+                <option value="Banani">Banani</option>
+                <option value="Gulshan">Gulshan</option>
+                <option value="Niketan, Gulshan">Niketan, Gulshan</option>
+                <option value="Mohakhali">Mohakhali</option>
+                <option value="Bashundhara">Bashundhara</option>
+                <option value="Banasree">Banasree</option>
+                <option value="Baridhara">Baridhara</option>
+                <option value="Uttarkhan">Uttarkhan</option>
+                <option value="Dakshinkhan">Dakshinkhan</option>
+                <option value="Bawnia">Bawnia</option>
+                <option value="Khilkhet">Khilkhet</option>
+                <option value="Tejgaon">Tejgaon</option>
+                <option value="Farmgate">Farmgate</option>
+                <option value="Mohammadpur">Mohammadpur</option>
+                <option value="Rampura">Rampura</option>
+                <option value="Badda">Badda</option>
+                <option value="Satarkul">Satarkul</option>
+                <option value="Beraid">Beraid</option>
+                <option value="Khilgaon">Khilgaon</option>
+                <option value="Vatara">Vatara</option>
+                <option value="Gabtali">Gabtali</option>
+                <option value="Hazaribagh">Hazaribagh</option>
+                <option value="Dhanmondi">Dhanmondi</option>
+                <option value="Segunbagicha">Segunbagicha</option>
+                <option value="Ramna">Ramna</option>
+                <option value="Motijheel">Motijheel</option>
+                <option value="Sabujbagh">Sabujbagh</option>
+                <option value="Lalbagh">Lalbagh</option>
+                <option value="Kamalapur">Kamalapur</option>
+                <option value="Kamrangirchar">Kamrangirchar</option>
+                <option value="Islampur">Islampur</option>
+                <option value="Sadarghat">Sadarghat</option>
+                <option value="Wari">Wari</option>
+                <option value="Kotwali">Kotwali</option>
+                <option value="Sutrapur">Sutrapur</option>
+                <option value="Jurain">Jurain</option>
+                <option value="Dania">Dania</option>
+                <option value="Demra">Demra</option>
+                <option value="Shyampur">Shyampur</option>
+                <option value="Nimtoli">Nimtoli</option>
+                <option value="Matuail">Matuail</option>
+                <option value="Shahbagh">Shahbagh</option>
+                <option value="Paltan">Paltan</option>
+            </select>
+        </div>
+        <div>
+            <label for="events">Name of Event:</label>
+            <select id="events" name="events"></select>
+        </div>
+        <div>
+            <label for="donationDate">Date of Donation:</label>
+            <input type="date" id="donationDate" name="donationDate">
+        </div>
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" readonly>
+        </div>
+        <div>
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" readonly>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" readonly>
+        </div>
+        <div>
+            <label for="eventID">Event ID:</label>
+            <input type="text" id="eventID" name="eventID" readonly>
+        </div>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="button-container">
+             <a href="user_dashboard.php"><button>GO BACK TO PROFILE</button></a>
+        </div>
+
+    <script>
+
+$(document).ready(function() {
+            // Fetch events on selected region
+            $('#region').on('change', function() {
+                var selectedRegion = $(this).val();
+                if (selectedRegion) {
+                    $.ajax({
+                        url: 'get_events.php',
+                        type: 'post',
+                        data: {region: selectedRegion},
+                        dataType: 'json', // Specify JSON dataType
+                        success: function(data) {
+                            $('#events').html(data.options);
+                            $('#location').val(data.location);
+                            $('#contact').val(data.contact);
+                            $('#email').val(data.email);
+                            $('#eventID').val(data.eventID);
+                        }
+                    });
+                }
+            });
+
+            // Update form fields when event is selected
+            $('#events').on('change', function() {
+                var selectedOption = $(this).find('option:selected');
+                $('#location').val(selectedOption.data('location'));
+                $('#contact').val(selectedOption.data('contact'));
+                $('#email').val(selectedOption.data('email'));
+                $('#eventID').val($(this).val());
+                var eventDate = selectedOption.data('eventdate');
+    $('#donationDate').val(eventDate);
+            });
+
+            
+            
+        });
+    </script>
+
+    </script>
+</body>
+</html>
