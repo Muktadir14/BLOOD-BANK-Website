@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user_welcome.css">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-right">
+            <p>Welcome, <?php echo $_SESSION['first_name'] . ' ' . $_SESSION['last_name']; ?>!</p>
+            <form action="user_welcome(logout).php" method="post">
+                <button type="submit" name="logout">Logout</button>
+            </form>
+        </div>
+
+        <div class="button-row">
+            <label for="donate-button">For donation, click here</label>
+            <button class="donate-button">Donate</button>
+        </div>
+
+        <div class="button-row">
+            <label for="receive-button">For receiving blood, click here</label>
+            <button class="receive-button">Receive blood</button>
+        </div>
+    </div>
+</body>
+</html>

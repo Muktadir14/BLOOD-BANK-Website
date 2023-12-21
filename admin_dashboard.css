@@ -1,0 +1,136 @@
+/* Style the header */
+.header {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(163, 44, 44));
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Style the table buttons */
+.tables {
+    margin-bottom: 20px;
+}
+
+.tables button {
+    background-color: #4a6e8b;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.tables button:hover {
+    background-color: #7bd53b;
+}
+
+/* Style the displayed data */
+.data-display {
+    border: 1px solid #e8c8c8;
+    padding: 90px;
+    width: 200%; /* Increased width */
+    overflow-x: auto;
+}
+
+
+.data-display table {
+    width: 150%;
+    border-collapse: collapse;
+}
+
+.data-display th,
+.data-display td {
+    border: 1px solid #260404;
+    padding: 8px;
+}
+
+.data-display th {
+    background-color: #edbbbb;
+}
+ /* Style for the menu button */
+ .menu-button {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #31709f;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #8cd7b4;
+    right: 30px;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown content on hover */
+.menu-button:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the dropdown items */
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Basic styling for the form elements */
+#filterForm {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#filterForm label,
+#filterForm select,
+#filterForm input[type="text"],
+#filterForm button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styling for the displayed data */
+#dataDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+}
+
+/* Define button styles */
+.custom-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.custom-button:hover {
+    background-color: rgb(92, 176, 146);
+}
+

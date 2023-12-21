@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-image: url('bg.png'); /* Path to your image file */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+h1 {
+    color: #333;
+}
+
+.button-container {
+    display: inline-block; /* Set the container to inline-block to make buttons appear side by side */
+    border: 2px solid #007BFF; /* Add a border around the container */
+    border-radius: 5px; /* Add rounded corners to the container */
+    padding: 10px; /* Add some padding inside the container */
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00b371;
+}

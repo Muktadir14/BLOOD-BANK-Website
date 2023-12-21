@@ -1,0 +1,171 @@
+body {
+    background-color: #FFD9E0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(163, 44, 44));
+    color: #FFFFFF;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.event-info {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.event-name {
+    font-size: 24px;
+}
+
+.sign-out {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+.sign-out a {
+    background-color: #FFFFFF;
+    color: #cc6e79;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sign-out a:hover {
+    background-color: #aed49c;
+    color: #FFFFFF;
+}
+
+.edit-event {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+.edit-event a {
+    background-color: #FFFFFF;
+    color: #cc6e79;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.edit-event a:hover {
+    background-color: #aed49c;
+    color: #FFFFFF;
+}
+
+.dashboard-content {
+    padding: 20px;
+}
+
+table.participants-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: lightpink;
+    border: 2px solid black;
+    margin-bottom: 20px; /* Added margin for separation */
+}
+
+table.participants-table th,
+table.participants-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table.participants-table th {
+    background-color: lightblue;
+    color: #FFFFFF;
+}
+
+table.participants-table th:first-child,
+table.participants-table td:first-child {
+    text-align: left;
+}
+
+table.participants-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Added styling for phone number and email headers */
+table.participants-table th.phone-number,
+table.participants-table th.email {
+    text-align: center;
+}
+
+/* Adjustments for the second table (Participants of the event) */
+.dashboard-content table.participants-table {
+    margin-top: 20px; /* Added margin to separate the two tables */
+}
+
+.dashboard-content table.participants-table th,
+.dashboard-content table.participants-table td {
+    min-width: 150px; /* Adjust the minimum width as needed */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Ensure the headers have the same width as the data cells */
+.dashboard-content table.participants-table th {
+    width: 150px; 
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2e59b7;
+    border: 1px solid #2e59b7;
+    border-radius: 4px;
+    z-index: 1;
+    min-width: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-content.show-menu {
+    display: flex;
+}
+
+.menu-item {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #3b9eba;
+    transition: .5s ease-in-out;
+}

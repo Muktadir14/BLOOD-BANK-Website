@@ -1,0 +1,72 @@
+/* Styles for the header */
+.header {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(163, 44, 44));
+    color: #191818;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 0;
+}
+
+.header-title {
+    font-size: 24px;
+}
+
+.return-btn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.return-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styles for the dashboard content */
+.dashboard-content {
+    margin: 20px;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+#searchInput {
+    margin-top: 5px;
+    padding: 8px;
+    width: 200px;
+}
+
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
